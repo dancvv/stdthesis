@@ -11,10 +11,15 @@
 ## 文件列表
 STDThesis
  |- stdthesis.cls         // LaTeX宏模板文件
+
  |- GBT7714-2005.bst      // 国标参考文献BibTeX样式文件2005版
+
  |- GBT7714-2015.bst      // 国标参考文献BibTeX样式文件2015版
+
  |- Template.tex          // LaTeX模板
+
  |- reference.bib         // LaTeX模板中的参考文献Bib文件
+ 
  +- ReadMe.md             // 本文件
 
 ## 模板使用
