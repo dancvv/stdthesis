@@ -456,7 +456,7 @@
   }
   \ifthenelse{\equal{\@refcolor}{on}}{%
     \hypersetup{
-      allcolors=black,
+      allcolors=blue,
     }
   }{%
     \hypersetup{
@@ -529,7 +529,7 @@
     \end{tabular}
   \end{spacing}
 
-  \vspace{100pt}
+  \vspace{140pt}
   \centering
   \begin{spacing}{1.2}
   {\songti \zihao{3}
