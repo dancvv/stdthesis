@@ -29,9 +29,12 @@ STDThesis
 ## 问题反馈
 邮箱：uquantum@hotmail.com
 
+GitHub：https://github.com/dancvv/STDthesis
+
 ## 声明
 这个模板是我的兴趣之作，不是官方的。对于格式，我尽量保证与教务处的Word模板一致，目前为止，经过再三修改，已与教务处模板基本一致。如果你有更好的意见，大家可以一块探讨一下。
 
 ## 致谢
 感谢北航魏学长的模板，我几乎全部使用了魏学长的成果。
+
 魏学长github地址：https://github.com/CheckBoxStudio/BUAAThesis
