@@ -3,7 +3,9 @@
 
 ## 注意事项：
 1、采用XeLaTex编译方式，中文支持使用ctex宏包
+
 2、建议使用TexStudio+Texlive2018编译环境
+
 3、目前Windows平台可正常运行，Liunix和Mac平台没有测试过，应该是没有问题的
 
 ## 文件列表
