@@ -350,8 +350,8 @@
 
 \@removefromreset{table}{chapter}
 \@removefromreset{figure}{chapter}
-\renewcommand{\thefigure}{\thechapter.\arabic{figure}}
-\renewcommand{\thetable}{\thechapter.\arabic{table}}
+\renewcommand{\thefigure}{\thechapter-\arabic{figure}}
+\renewcommand{\thetable}{\thechapter-\arabic{table}}
 \DeclareCaptionFormat{tabfigformat}{\heiti\zihao{5}{#1~~#3}}
 \captionsetup[figure]{
   position=bottom, margin=0mm, format=tabfigformat,
