@@ -10,6 +10,7 @@
 
 ## 文件列表
 STDThesis
+
  |- stdthesis.cls         // LaTeX宏模板文件
 
  |- GBT7714-2005.bst      // 国标参考文献BibTeX样式文件2005版
