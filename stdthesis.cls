@@ -81,7 +81,7 @@
 \ProcessOptions\relax
 
 % 引用ctexbook: 小4,1.5倍行距
-\LoadClass[UTF8,zihao=-4,linespread=1.7]{ctexbook}%1.5+0.2行间距
+\LoadClass[UTF8,zihao=-4,linespread=1.42]{ctexbook}%1.5+0.2行间距
 \setcounter{secnumdepth}{5}
 
 \usepackage{graphicx}
@@ -541,7 +541,7 @@
 \newcommand{\abstructkeyword}{% 摘要
 {\pdfbookmark[0]{中英摘要}{abstructkeyword}
  \thispagestyle{empty}
-  \begin{spacing}{1.667}%1.5+0.2
+  \begin{spacing}{1.5}%1.5+0.2
 
     \chapter*{摘\quad 要}
     {\zihao{-4} \songti ~
