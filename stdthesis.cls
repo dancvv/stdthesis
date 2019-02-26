@@ -339,19 +339,19 @@
 \let\org@table\table
 \let\org@endtable\endtable
 \renewenvironment{table}[1][h!]
-{\begin{spacing}{1.2} \org@table[#1] \heiti\zihao{5}}
+{\begin{spacing}{1.2} \org@table[#1] \songti\zihao{5}}
 {\org@endtable \end{spacing}}
 
 \let\org@longtable\longtable
 \let\org@endlongtable\endlongtable
 \renewenvironment{longtable}[1][h!]
-{\begin{spacing}{1.2} \heiti\zihao{5}\org@longtable[#1]}
+{\begin{spacing}{1.2} \songti\zihao{5}\org@longtable[#1]}
 {\org@endlongtable \end{spacing}}
 
 \@removefromreset{table}{chapter}
 \@removefromreset{figure}{chapter}
-\renewcommand{\thefigure}{\thechapter-\arabic{figure}}
-\renewcommand{\thetable}{\thechapter-\arabic{table}}
+\renewcommand{\thefigure}{\thechapter-\arabic{figure}\enskip}
+\renewcommand{\thetable}{\thechapter-\arabic{table}\enskip}
 \DeclareCaptionFormat{tabfigformat}{\heiti\zihao{5}{#1~~#3}}
 \captionsetup[figure]{
   position=bottom, margin=0mm, format=tabfigformat,
