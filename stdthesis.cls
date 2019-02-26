@@ -321,11 +321,11 @@
 \renewcommand{\headrulewidth}{0pt}
 
 % 设置目录格式
-\titlecontents{chapter}[0pt]{\songti\zihao{-4}}{\thecontentslabel\ }{}
+\titlecontents{chapter}[0pt]{\songti\zihao{-4}}{\thecontentslabel\quad}{}
 {\hspace{.5em}\titlerule*[4pt]{$\cdot$}\contentspage}
-\titlecontents{section}[1em]{\songti\zihao{-4}}{\thecontentslabel\ }{}
+\titlecontents{section}[1em]{\songti\zihao{-4}}{\thecontentslabel\quad}{}
 {\hspace{.5em}\titlerule*[4pt]{$\cdot$}\contentspage}
-\titlecontents{subsection}[2em]{\songti\zihao{-4}}{\thecontentslabel\ }{}
+\titlecontents{subsection}[2em]{\songti\zihao{-4}}{\thecontentslabel\quad}{}
 {\hspace{.5em}\titlerule*[4pt]{$\cdot$}\contentspage}
 \titlecontents{figure}[0pt]{\songti\zihao{5}}{图~\thecontentslabel\quad}{}
 {\hspace{.5em}\titlerule*[4pt]{$\cdot$}\contentspage}
@@ -456,7 +456,7 @@
   }
   \ifthenelse{\equal{\@refcolor}{on}}{%
     \hypersetup{
-      allcolors=blue,
+      allcolors=black,
     }
   }{%
     \hypersetup{
@@ -520,7 +520,7 @@
     \ziju{0.1}
     \zihao{3} \songti
     \begin{tabular}{cl}
-    \uline{\makebox[2.5cm]\@grade}届 &\uline{\makebox[7cm]\@department}\\
+    \uline{\makebox[2cm]\@grade}届 &\uline{\makebox[7cm]\@department}\\
       专 \qquad 业  & \uline{\makebox[7cm]\@major} \\
       姓 \qquad 名  & \uline{\makebox[7cm]\@authorcn} \\
       学 \qquad 号  & \uline{\makebox[7cm]\@studentid} \\
