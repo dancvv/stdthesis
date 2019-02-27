@@ -271,7 +271,7 @@
     number = {\arabic{chapter}},
     format=\zihao{-3} \heiti \centering \thispagestyle{fancy},
     fixskip=true,
-    beforeskip=35pt,
+    beforeskip=30pt,
     afterskip=35pt,
     break=\clearpage,
   },
@@ -304,14 +304,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 页面设置
 % 设置页面大小
-% A4纸页边距均25mm
-% 打印留边平移5mm
+% 上3.2cm，下2.8cm，左右空2.5cm(靠装订线一侧增加0.5cm空白用于装订)。
+% 页眉2.2cm，页脚2.0cm；行间距：20磅。
 \geometry{papersize={210mm,297mm}}
 \ifthenelse{\equal{\@printtype}{twoside}}{% 双面面
-  \geometry{top=25mm,bottom=25mm,left=27mm,right=27mm,headheight=10mm,footskip=7mm}
+  \geometry{top=32mm,bottom=28mm,left=25mm,right=25mm,headheight=10mm,footskip=8mm}
 }{%
   \ifthenelse{\equal{\@printtype}{oneside}}{% 单面
-    \geometry{top=25mm,bottom=25mm,left=27mm,right=27mm,headheight=10mm,footskip=7mm}
+    \geometry{top=32mm,bottom=28mm,left=25mm,right=25mm,headheight=10mm,footskip=8mm}
     \geometry{layouthoffset=5mm}}{}
 }
 
@@ -514,7 +514,7 @@
    }
   \end{spacing}
 
-  \vspace{135pt}
+  \vspace{105pt}
   \begin{spacing}{1.3}
   	\centering
     \ziju{0.1}
@@ -529,7 +529,7 @@
     \end{tabular}
   \end{spacing}
 
-  \vspace{140pt}
+  \vspace{110pt}
   \centering
   \begin{spacing}{1.2}
   {\songti \zihao{3}
@@ -541,8 +541,7 @@
 \newcommand{\abstructkeyword}{% 摘要
 {\pdfbookmark[0]{中英摘要}{abstructkeyword}
  \thispagestyle{empty}
-  \begin{spacing}{1.5}%1.5+0.2
-
+  \begin{spacing}{1.43}%1.5+0.2
     \chapter*{摘\quad 要}
     {\zihao{-4} \songti ~
       \@abstrctcn \par ~\par
@@ -550,7 +549,7 @@
     }
 
     \clearpage
-    \ifthenelse{\equal{\@beginright}{off}}{\clearpage}{\clearautopage}
+    %\ifthenelse{\equal{\@beginright}{off}}{\clearpage}{\clearautopage}
     \chapter*{ABSTRACT}
     {\zihao{-4} ~
       \@abstrcten \par ~\par
