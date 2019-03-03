@@ -19,28 +19,6 @@
   You have not specified the THESIS option. The word thesis should be replaced by one of the following thesis type: bachelor(default), professional, doctor.
 }}
 
-%% 密级
-\DeclareOption{public}{\gdef\@permission{public}}             % 公开
-\DeclareOption{privacy}{\gdef\@permission{privacy}}           % 内部
-\DeclareOption{secret}{\gdef\@permission{secret3}}            % 秘密 = 秘密3年
-\DeclareOption{secret3}{\gdef\@permission{secret3}}           % 秘密3年
-\DeclareOption{secret5}{\gdef\@permission{secret5}}           % 秘密5年
-\DeclareOption{secret10}{\gdef\@permission{secret10}}         % 秘密10年
-\DeclareOption{secret*}{\gdef\@permission{secret*}}           % 秘密永久
-\DeclareOption{classified}{\gdef\@permission{classified5}}    % 机密 = 机密5年
-\DeclareOption{classified3}{\gdef\@permission{classified3}}   % 机密3年
-\DeclareOption{classified5}{\gdef\@permission{classified5}}   % 机密5年
-\DeclareOption{classified10}{\gdef\@permission{classified10}} % 机密10年
-\DeclareOption{classified*}{\gdef\@permission{classified*}}   % 机密永久
-\DeclareOption{topsecret}{\gdef\@permission{topsecret10}}     % 绝密 = 绝密10年
-\DeclareOption{topsecret3}{\gdef\@permission{topsecret3}}     % 绝密3年
-\DeclareOption{topsecret5}{\gdef\@permission{topsecret5}}     % 绝密5年
-\DeclareOption{topsecret10}{\gdef\@permission{topsecret10}}   % 绝密10年
-\DeclareOption{topsecret*}{\gdef\@permission{topsecret*}}     % 绝密永久
-\DeclareOption{permission}{\ClassWarning{std}{%
-  You have not specified the PERMISSION option. The word permission should be replaced by one of the following thesis type: public, privacy, secret, classified, topsecret.
-}}
-
 %% 打印设置
 \DeclareOption{oneside}{\gdef\@printtype{oneside}} % 单面打印
 \DeclareOption{twoside}{\gdef\@printtype{twoside}} % 双面打印
