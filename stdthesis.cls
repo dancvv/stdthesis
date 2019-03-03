@@ -382,6 +382,10 @@
 \setlength{\bibsep}{0pt}
 \newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}}
 
+%定义颜色
+\definecolor{pink}{RGB}{255,192,203}
+\definecolor{lime}{RGB}{0,255,0}
+\definecolor{cyan}{RGB}{0,255,255}
 % 设置PDF
 \hypersetup{%
   colorlinks=true,
