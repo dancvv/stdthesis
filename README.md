@@ -20,6 +20,8 @@ STDThesis
  |- Template.tex          // LaTeX模板
 
  |- reference.bib         // LaTeX模板中的参考文献Bib文件
+
+ |- stdthesisextra。sty   // LaTeX模板中的扩展文件，以免源文件过于臃肿
  
  +- ReadMe.md             // 本文件
 
