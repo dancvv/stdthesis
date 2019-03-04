@@ -205,7 +205,6 @@
 \def\@branch{工学} % 学科大类
 \newcommand{\Branch}[1]{\gdef\@branch{#1}}
 \newcommand{\Major}[1]{\gdef\@major{#1}}
-\newcommand{\Feild}[1]{\gdef\@feild{#1}}
 \newcommand{\Tutor}[2]{\gdef\@tutorcn{#1} \gdef\@tutordegree{#2}}
 \newcommand{\Cotutor}[3]{%
   \gdef\@cotutorcn{#1}
@@ -380,8 +379,6 @@
     Please set department by 'Department'.}}{}
   \ifthenelse{\isundefined{\@major}}{\errmessage{%
     Please set major by 'Major'.}}{}
-  \ifthenelse{\isundefined{\@feild}}{\errmessage{%
-    Please set feild by 'Feild'.}}{}
   \ifthenelse{\isundefined{\@tutorcn}}{\errmessage{%
     Please set tutor name by 'Tutor'.}}{}
   \ifthenelse{\isundefined{\@authorcn}}{\errmessage{%
