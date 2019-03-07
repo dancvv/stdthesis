@@ -8,13 +8,11 @@
 %% 模板标识
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{stdthesis}[2019 v1.0 STD thesis class]
-\typeout{This is LaTeX template std, Version 2.1 (based on CTex) 12-19-2018}
+\typeout{This is LaTeX template std, Version 1.0 (based on CTex) 12-19-2018}
 
 %% 选项
 %% 论文类型
-\DeclareOption{bachelor}{\gdef\@thesis{bachelor}}             % 学术硕士论文
-\DeclareOption{professional}{\gdef\@thesis{professional}} % 专业硕士论文
-\DeclareOption{doctor}{\gdef\@thesis{doctor}}             % 博士论文
+\DeclareOption{bachelor}{\gdef\@thesis{bachelor}}
 \DeclareOption{thesis}{\ClassWarning{std}{%fan
   You have not specified the THESIS option. The word thesis should be replaced by one of the following thesis type: bachelor(default), professional, doctor.
 }}
@@ -25,27 +23,6 @@
 
 %% 适应首字母大写
 \DeclareOption{bachelor}{\gdef\@thesis{bachelor}}
-\DeclareOption{Professional }{\gdef\@thesis{professional }}
-\DeclareOption{Doctor}{\gdef\@thesis{doctor}}
-\DeclareOption{Public}{\gdef\@permission{public}}
-\DeclareOption{Privacy}{\gdef\@permission{privacy}}
-\DeclareOption{Secret}{\gdef\@permission{secret3}}
-\DeclareOption{Secret3}{\gdef\@permission{secret3}}
-\DeclareOption{Secret5}{\gdef\@permission{secret5}}
-\DeclareOption{Secret10}{\gdef\@permission{secret10}}
-\DeclareOption{Secret}*{\gdef\@permission{secret*}}
-\DeclareOption{Classified}{\gdef\@permission{classified5}}
-\DeclareOption{Classified3}{\gdef\@permission{classified3}}
-\DeclareOption{Classified5}{\gdef\@permission{classified5}}
-\DeclareOption{Classified10}{\gdef\@permission{classified10}}
-\DeclareOption{Classified*}{\gdef\@permission{classified*}}
-\DeclareOption{TopSecret}{\gdef\@permission{topsecret10}}
-\DeclareOption{TopSecret3}{\gdef\@permission{topsecret3}}
-\DeclareOption{TopSecret5}{\gdef\@permission{topsecret5}}
-\DeclareOption{TopSecret10}{\gdef\@permission{topsecret10}}
-\DeclareOption{TopSecret*}{\gdef\@permission{topsecret*}}
-\DeclareOption{Oneside}{\gdef\@printtype{oneside}}
-\DeclareOption{Twoside}{\gdef\@printtype{twoside}}
 
 %% 选项传递给ctexbook
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{ctexbook}}
@@ -54,26 +31,12 @@
 \ExecuteOptions{bachelor,pubilc,oneside,a4paper,sub4section}
 \ProcessOptions\relax
 
-% 引用ctexbook: 小4,1.5倍行距
+% 引用ctexbook: 小4,20磅行距
 \LoadClass[UTF8,zihao=-4,linespread=1.42]{ctexbook}%1.5+0.2行间距
 \setcounter{secnumdepth}{5}
 
 \usepackage{graphicx}
-\def\BUAAThesisVer{v2.1 12-19-2018}
-\def\BUAAThesis{%
- S%
- {\fontsize{0.8em}{\baselineskip}\selectfont
- \kern-.12em\lower.5ex\hbox{T}%
- \kern-.32em\raise.48ex\hbox{D}%
-}
- \kern-.35emT%
- \kern-.22em\lower.5ex\hbox{H}%
- \kern-.08em E%
- \kern-.05em\lower.5ex\hbox{S}%
- \kern-.26em I%
- \kern-.26em\raise.5ex\hbox{\rotatebox[origin=c]{180}{S}}%
-}
-% 铁大版LaTex图标自定义
+\def\STDThesisVer{v1.0}
 \def\STDThesis{%
  S%
  {\fontsize{0.8em}{\baselineskip}\selectfont
@@ -116,7 +79,7 @@
 \RequirePackage{pifont}       % 画五角星
 \RequirePackage{color}        % To provide color for soul
 \RequirePackage{soul}         % To highlight text
-\RequirePackage[numbers,square,comma,super,sort&compress]{natbib}              % BibTex
+\RequirePackage[sort&compress]{natbib}              % BibTex
 \DeclareGraphicsExtensions{.eps,.ps,.png,.jpg,.bmp} % 声明使用图像格式
 \newcommand{\highlight}[1]{\colorbox{yellow}{#1}}   % 高亮注释
 
@@ -199,17 +162,9 @@
 \newcommand{\Grade}[1]{\gdef\@grade{#1}}
 
 \newcommand{\Title}[2]{\gdef\@titlecn{#1} \gdef\@titleen{#2}}
-\newcommand{\Subtitle}[2]{\gdef\@subtitlecn{#1} \gdef\@subtitleen{#2}}
-
 \newcommand{\Department}[1]{\gdef\@department{#1}}
-\def\@branch{工学} % 学科大类
-\newcommand{\Branch}[1]{\gdef\@branch{#1}}
 \newcommand{\Major}[1]{\gdef\@major{#1}}
 \newcommand{\Tutor}[2]{\gdef\@tutorcn{#1} \gdef\@tutordegree{#2}}
-\newcommand{\Cotutor}[3]{%
-  \gdef\@cotutorcn{#1}
-  \gdef\@cotutoren{#2}
-  \gdef\@cotutordegree{#3}}
 \newcommand{\Author}[1]{\gdef\@authorcn{#1}}
 \newcommand{\StudentID}[1]{\gdef\@studentid{#1}}
 
@@ -365,9 +320,8 @@
   bookmarksnumbered=true,
   bookmarksopen=true,
   pdffitwindow=true,
-  %linkcolor=black,%将超链接字体颜色变为黑色
   pdfsubject={std thesis},
-  pdfcreator={LaTeXed~By~WeiQM}
+  pdfcreator={LaTeXed~By~WW}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -447,16 +401,10 @@
   \sethyper
 }
 \AfterEndPreamble{%
-  \makecovercn
-  %\makecoveren
-  %\makecoverinner
-  %\makestatementstd
-
-  %\fancyfoot[C]{\zihao{5} \uppercase\expandafter{\romannumeral \thepage}}
-  %\setcounter{page}{1}
+  \makecover
   \abstructkeyword
-  \makecontextlist
   %\denotioan
+  \makecontextlist
 
   \renewcommand{\headrulewidth}{0.4pt}
   \fancyfoot[C]{\zihao{5} \thepage}
@@ -466,18 +414,13 @@
 
 
 %% 制作封面及声明
-\newcommand{\makecovercn}{% 中文封面
-{\pdfbookmark[0]{中文封面}{makecovercn}
-
+\newcommand{\makecover}{% 中文封面
+{\pdfbookmark[0]{中文封面}{makecover}
   {\zihao{4} \heiti \noindent
     \makebox[11\ccwd][s]{\uline{石家庄铁道大学毕业设计}}%：{\bfseries \@clc}%
-
   }
-
   \vspace{80pt}
 
-
-  %\vspace{20pt}
   \begin{spacing}{1.2}
   	\centering
     \ifthenelse{\isundefined{\@titlecn}}{\vspace{20pt}}{}
@@ -524,7 +467,7 @@
     }
 
     \clearpage
-    %\ifthenelse{\equal{\@beginright}{off}}{\clearpage}{\clearautopage}
+
     \chapter*{ABSTRACT}
     {\zihao{-4} ~
       \@abstrcten \par ~\par
@@ -599,13 +542,7 @@
   \renewcommand{\theequation}{A\arabic{equation}}
   \setcounter{equation}{0}
 }
-\newcommand{\achievement}{%学术成果
-  \ctexset{chapter/numbering=false}
-  \ifthenelse{\equal{\@thesis}{bachelor}}{\chapter{攻读硕士学位期间取得的学术成果}}{
-  \ifthenelse{\equal{\@thesis}{professional}}{\chapter{攻读硕士学位期间取得的学术成果}}{
-  \ifthenelse{\equal{\@thesis}{doctor}}{\chapter{攻读博士学位期间取得的研究成果}}{
-  }}}
-}
+
 \newcommand{\acknowledgments}{%致谢
   \ctexset{chapter/numbering=false}
   \chapter{致~~~~谢}
