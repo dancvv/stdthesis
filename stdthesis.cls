@@ -28,7 +28,7 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{ctexbook}}
 
 %% 默认选项配置
-\ExecuteOptions{bachelor,pubilc,oneside,a4paper,sub4section}
+\ExecuteOptions{bachelor,oneside,a4paper,sub4section}
 \ProcessOptions\relax
 
 % 引用ctexbook: 小4,20磅行距
@@ -186,13 +186,13 @@
   autoindent=2,  % 缩进
   linestretch=2, % 行伸缩
 }
-% 部分标题修改
+% 目录页标题修改
 \ctexset{%
   contentsname={目~~~~录},
   listfigurename={图~清~单},
   listtablename={表~清~单},
 }
-% 标题样式修改
+% 正文标题样式修改
 \ctexset{%
   chapter={%章标题 : 三号黑体居中 单倍行距 段前/段后0.5行 另起新页
     name = {第,章},
@@ -236,7 +236,7 @@
 % 页眉2.2cm，页脚2.0cm；行间距：20磅。
 \geometry{papersize={210mm,297mm}}
 \ifthenelse{\equal{\@printtype}{twoside}}{% 双面面
-  \geometry{top=32mm,bottom=28mm,left=25mm,right=25mm,headheight=10mm,footskip=8mm}
+  \geometry{top=3.2cm,bottom=2.8cm,left=2.5cm,right=2.5cm,headheight=1cm,footskip=0.8cm}
 }{%
   \ifthenelse{\equal{\@printtype}{oneside}}{% 单面
     \geometry{top=32mm,bottom=28mm,left=25mm,right=25mm,headheight=10mm,footskip=8mm}
@@ -400,6 +400,7 @@
   \checkinput
   \sethyper
 }
+%默认不开启注释表
 \AfterEndPreamble{%
   \makecover
   \abstructkeyword

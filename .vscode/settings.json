@@ -1,0 +1,4 @@
+{
+    "latex-workshop.bind.enter.key": false,
+    "latex-preview.command": "xelatex"
+}
