@@ -154,8 +154,8 @@
 %% 输入
 \def\@refcolor{} % 给注释及引用使用颜色 on/off
 \newcommand{\refcolor}[1]{\gdef\@refcolor{#1}}
-\def\@emptypagewords{} % 空白页留字
-\newcommand{\emptypagewords}[1]{\gdef\@emptypagewords{#1}}
+%\def\@emptypagewords{} % 空白页留字
+%\newcommand{\emptypagewords}[1]{\gdef\@emptypagewords{#1}}
 \def\@beginright{} % 摘要、目录、第一章右侧打开 on/off
 \newcommand{\beginright}[1]{\gdef\@beginright{#1}}
 
@@ -365,14 +365,14 @@
   \ifthenelse{\equal{\@printtype}{twoside}}{% 双面
     \ifodd\c@page
     \else
-      \hbox{}
-      \vspace*{\fill}
-      \begin{center}
-        {\textcolor[rgb]{0.75,0.75,0.75}{\@emptypagewords}}
-      \end{center}
-      \vspace{\fill}
-      \thispagestyle{empty}
-      \newpage
+%     \hbox{}
+%      \vspace*{\fill}
+%      \begin{center}
+%        {\textcolor[rgb]{0.75,0.75,0.75}{\@emptypagewords}}
+%      \end{center}
+%      \vspace{\fill}
+%      \thispagestyle{empty}
+%      \newpage
       \if@twocolumn \hbox{} \newpage \fi
     \fi
   }{}
