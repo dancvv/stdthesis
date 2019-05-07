@@ -28,6 +28,9 @@ STDThesis
 ## 模板使用
  参看LaTeX模板示例template.tex及相应插入章节tex/*.tex，直接修改编译文档即可
 
+## 模板更新
+ 如果之前下载了旧版的模板，更新之后不需下载完整的文档。只需下载stdthesi.cls并替换本地文件即可。
+
 ## 问题反馈
 邮箱：uquantum@hotmail.com
 
