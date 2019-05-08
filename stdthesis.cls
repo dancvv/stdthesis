@@ -164,7 +164,7 @@
 \newcommand{\Title}[2]{\gdef\@titlecn{#1} \gdef\@titleen{#2}}
 \newcommand{\Department}[1]{\gdef\@department{#1}}
 \newcommand{\Major}[1]{\gdef\@major{#1}}
-\newcommand{\Tutor}[2]{\gdef\@tutorcn{#1} \gdef\@tutordegree{#2}}
+\newcommand{\Tutor}[1]{\gdef\@tutorcn{#1}}% \gdef\@tutordegree{#2}}
 \newcommand{\Author}[1]{\gdef\@authorcn{#1}}
 \newcommand{\StudentID}[1]{\gdef\@studentid{#1}}
 
@@ -443,12 +443,11 @@
       专 \qquad 业  & \uline{\makebox[7cm]\@major} \\
       姓 \qquad 名  & \uline{\makebox[7cm]\@authorcn} \\
       学 \qquad 号  & \uline{\makebox[7cm]\@studentid} \\
-      指导教师  & \uline{\makebox[7cm]\@tutorcn} \\
-               & \uline{\makebox[7cm]\@tutordegree}
+      指导教师  		& \uline{\makebox[7cm]\@tutorcn}
     \end{tabular}
   \end{spacing}
 
-  \vspace{110pt}
+  \vspace{6cm}
   \centering
   \begin{spacing}{1.2}
   {\songti \zihao{3}
