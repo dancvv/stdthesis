@@ -276,10 +276,12 @@
 {\begin{spacing}{1.2} \songti\zihao{5}\org@longtable[#1]}
 {\org@endlongtable \end{spacing}}
 
+
+%去掉图标环境中的多余空白
 \@removefromreset{table}{chapter}
 \@removefromreset{figure}{chapter}
-\renewcommand{\thefigure}{\thechapter-\arabic{figure}\enskip}
-\renewcommand{\thetable}{\thechapter-\arabic{table}\enskip}
+\renewcommand{\thefigure}{\thechapter-\arabic{figure}}%\enskip}
+\renewcommand{\thetable}{\thechapter-\arabic{table}}%\enskip}
 \DeclareCaptionFormat{tabfigformat}{\heiti\zihao{5}{#1~~#3}}
 \captionsetup[figure]{
   position=bottom, margin=0mm, format=tabfigformat,
