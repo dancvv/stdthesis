@@ -5,10 +5,10 @@
 %=====以及定义你自己的功能和常量=======
 \newcommand{\speakyourlove}[1][Mom]{\emph{#1, I Love You!}} 
 %\RequirePackage{color}
-
-
-
-
+\RequirePackage{nameref}
+\renewcommand{\Nameref}[1]{%
+\textbf{\ref{#1}~\nameref{#1}}}
+%章节标题引用方法，\Nameref{label}
 
 
 
