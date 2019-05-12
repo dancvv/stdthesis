@@ -32,7 +32,7 @@
 \ProcessOptions\relax
 
 % 引用ctexbook: 小4,20磅行距
-\LoadClass[UTF8,zihao=-4,linespread=1.42]{ctexbook}%1.5+0.2行间距
+\LoadClass[UTF8,zihao=-4,linespread=1.4]{ctexbook}%1.5+0.2行间距
 \setcounter{secnumdepth}{5}
 
 \usepackage{graphicx}
@@ -249,15 +249,15 @@
 \renewcommand{\headrulewidth}{0pt}
 
 % 设置目录格式
-\titlecontents{chapter}[0pt]{\songti\zihao{-4}}{\thecontentslabel\quad}{}
+\titlecontents{chapter}[0pt]{\songti\zihao{-4}}{\thecontentslabel\quad }{}
 {\hspace{.5em}\titlerule*[4pt]{$\cdot$}\contentspage}
-\titlecontents{section}[1em]{\songti\zihao{-4}}{\thecontentslabel\quad}{}
+\titlecontents{section}[1em]{\songti\zihao{-4}}{\thecontentslabel\quad }{}
 {\hspace{.5em}\titlerule*[4pt]{$\cdot$}\contentspage}
-\titlecontents{subsection}[2em]{\songti\zihao{-4}}{\thecontentslabel\quad}{}
+\titlecontents{subsection}[2em]{\songti\zihao{-4}}{\thecontentslabel\quad }{}
 {\hspace{.5em}\titlerule*[4pt]{$\cdot$}\contentspage}
-\titlecontents{figure}[0pt]{\songti\zihao{5}}{图~\thecontentslabel\quad}{}
+\titlecontents{figure}[0pt]{\songti\zihao{5}}{图~\thecontentslabel\quad }{}
 {\hspace{.5em}\titlerule*[4pt]{$\cdot$}\contentspage}
-\titlecontents{table}[0pt]{\songti\zihao{5}}{表~\thecontentslabel\quad}{}
+\titlecontents{table}[0pt]{\songti\zihao{5}}{表~\thecontentslabel\quad }{}
 {\hspace{.5em}\titlerule*[4pt]{$\cdot$}\contentspage}
 
 %段落间距设置，默认不开启
@@ -278,10 +278,12 @@
 
 
 %去掉图标环境中的多余空白
-\@removefromreset{table}{chapter}
-\@removefromreset{figure}{chapter}
-\renewcommand{\thefigure}{\thechapter-\arabic{figure}}%\enskip}
-\renewcommand{\thetable}{\thechapter-\arabic{table}}%\enskip}
+% 定公式、图、表、算法、代码的编号为"3-1"的形式
+% 此处注释的语句会将计数保存，每章开始不会重新计数
+%\@removefromreset{table}{chapter}
+%\@removefromreset{figure}{chapter}
+\renewcommand{\thefigure}{\arabic{chapter}-\arabic{figure}}%\enskip}
+\renewcommand{\thetable}{\arabic{chapter}-\arabic{table}}%\enskip}
 \DeclareCaptionFormat{tabfigformat}{\heiti\zihao{5}{#1~~#3}}
 \captionsetup[figure]{
   position=bottom, margin=0mm, format=tabfigformat,
