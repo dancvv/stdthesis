@@ -284,6 +284,7 @@
 %\@removefromreset{figure}{chapter}
 \renewcommand{\thefigure}{\arabic{chapter}-\arabic{figure}}%\enskip}
 \renewcommand{\thetable}{\arabic{chapter}-\arabic{table}}%\enskip}
+\renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
 \DeclareCaptionFormat{tabfigformat}{\heiti\zihao{5}{#1~~#3}}
 \captionsetup[figure]{
   position=bottom, margin=0mm, format=tabfigformat,
@@ -312,7 +313,11 @@
 \bibpunct{[}{]}{,}{n}{}{}
 %\setlength{\labelsep}{40pt} %序号之间的间距
 \setlength{\bibsep}{0pt}
+%定义引用上标
+%\newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}}
 \newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}}
+
+
 
 %定义颜色
 \definecolor{pink}{RGB}{255,192,203}
@@ -424,7 +429,7 @@
   {\zihao{4} \heiti \noindent
     \makebox[11\ccwd][s]{\uline{石家庄铁道大学毕业设计}}%：{\bfseries \@clc}%
   }
-  \vspace{80pt}
+  \vspace{50pt}
 
   \begin{spacing}{1.2}
   	\centering
@@ -437,7 +442,7 @@
    }
   \end{spacing}
 
-  \vspace{105pt}
+  \vspace{122pt}
   \begin{spacing}{1.3}
   	\centering
     \ziju{0.1}
@@ -451,7 +456,7 @@
     \end{tabular}
   \end{spacing}
 
-  \vspace{6cm}
+  \vspace{5cm}
   \centering
   \begin{spacing}{1.2}
   {\songti \zihao{3}
