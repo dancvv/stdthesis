@@ -472,7 +472,7 @@
     \chapter*{摘\quad 要}
     {\zihao{-4} \songti ~
       \@abstrctcn \par ~\par
-      {\heiti 关键字：} \@keywordcn
+      {\noindent \heiti 关键字：} \@keywordcn
     }
 
     \clearpage
@@ -480,7 +480,7 @@
     \chapter*{ABSTRACT}
     {\zihao{-4} ~
       \@abstrcten \par ~\par
-      {\bfseries Key words:} \@keyworden
+      {\noindent \bfseries Key words:} \@keyworden
     }
 
   \end{spacing}
