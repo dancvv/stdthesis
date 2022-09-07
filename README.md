@@ -39,6 +39,6 @@ GitHub：https://github.com/dancvv/STDthesis
 ## 提醒
 这个latex模板基本实现了教务处要求的所有格式，但是还是存在一些未知的不匹配项
 ## 致谢
-感谢北航魏学长的模板，我几乎全部使用了魏学长的成果。
+感谢北航魏学长的模板
 
 魏学长github地址：https://github.com/CheckBoxStudio/BUAAThesis
